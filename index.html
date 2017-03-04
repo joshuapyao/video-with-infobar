@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>video-template</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- placeholder header image -->
+	<div class="kcts-header">
+			<img alt="KCTS 9 Header" src="img/header.PNG"/>
+	</div>
+
+	<div id="main-landing">
+		<div id="video-container">
+
+			<!-- Video -->
+			<div id="video-and-cover">
+				<!-- change poster for the starting image and sources for different video formats -->
+				<video id="video" width="100%" poster="img/food.jpg">
+					<source src="videos/mikethefrog.webm" type="video/webm">
+					<source src="videos/mikethefrog.ogv" type="video/ogv">
+					<source src="videos/mikethefrog.mp4" type="video/mp4">
+					<p>
+						Your browser doesn't support HTML5 video.
+					</p>
+				</video>
+
+				<!-- add content to this div for pause overlay -->
+				<div id="video-cover">
+					<div id="cover-text">
+						<h1>Placeholder Title</h1>
+						<p>Placeholder text here, make any changes you want here</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Video Controls -->
+			<div id="video-controls">
+				<button type="button" id="play-pause" class="play">Play</button>
+				<div class="outerClass">
+					<div id="seekOverlay">
+						<input type="range" id="seek-bar" value="0">
+					</div>
+				</div>
+				<button type="button" id="mute">Mute</button>
+				<input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+				<button type="button" id="full-screen">Full-Screen</button>
+			</div>
+		</div>
+
+		<!-- Instructions section -->
+		<div id="sidebar">
+			<div class="full-block" id="time-links">
+
+				<!-- Print button that can be linked to recipe text file -->
+				<h2>Header<span>&nbsp;
+					<a href="#"><img alt="print" width="20px" src="img/print-icon.png"/></a>
+				</span></h2>
+			</div>
+			<div class="overflow-block">
+				<h2>Directions</h2>
+				<ol>
+					<li>Throw all of your ingredients into a blender. Add ice liberally.</li>
+					<li>Blend it up.</li>
+					<li>Serve to your willing guests.</li>
+				</ol>
+			</div>
+	</div>
+
+	<script src="timecodes.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

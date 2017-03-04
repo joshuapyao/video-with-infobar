@@ -1,0 +1,289 @@
+/* Change these values to change the color scheme of the page */
+body {
+	margin: 0;
+}
+
+#main-landing {
+	width: 100%;
+	position: relative;
+}
+
+/* Sets the video container to fill rest of screen while keeping 16:9 aspect ratio */
+#video-container {
+	position: relative;
+}
+
+#video {
+	display: flex;
+}
+
+#video-and-cover {
+	position: relative;
+}
+
+#video-cover {
+	position: absolute;
+	background-color: black;
+	opacity: 0.8;
+	padding: 5vw;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#cover-text {
+	font-family: arial;
+	color: white;
+}
+
+#video-controls {
+	height: 40px;
+	display: inline-block;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+	background-image: linear-gradient(bottom, rgb(3,113,168) 13%, rgb(0,136,204) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(3,113,168) 13%, rgb(0,136,204) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(3,113,168) 13%, rgb(0,136,204) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(3,113,168) 13%, rgb(0,136,204) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(3,113,168) 13%, rgb(0,136,204) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.13, rgb(3,113,168)),
+		color-stop(1, rgb(0,136,204))
+	);
+}
+
+button {
+	background: rgba(0,0,0,.5);
+	border: 0;
+	color: #EEE;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+#volume-bar {
+	padding-top: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	background: transparent;
+	width: 60px;
+}
+
+#seek-bar {
+	width: 100%;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	background: transparent;
+}
+
+/* custom seek bar */
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+}
+
+/* custom slider thumb */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8.4px;
+  width: 10px;
+  border-radius: 3px;
+  background: rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+	height: 8.4px;
+  width: 10px;
+  border-radius: 3px;
+  background: rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+	height: 8.4px;
+  width: 10px;
+  border-radius: 3px;
+  background: rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+
+#sidebar {
+	position: absolute;
+	height: 100%;
+	overflow-y: scroll;
+	font-family: Arial;
+	background-image: linear-gradient(bottom, rgb(3,113,168) 5%, rgb(0,136,204) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(3,113,168) 5%, rgb(0,136,204) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(3,113,168) 5%, rgb(0,136,204) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(3,113,168) 5%, rgb(0,136,204) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(3,113,168) 5%, rgb(0,136,204) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(3,113,168)),
+		color-stop(1, rgb(0,136,204))
+	);
+}
+
+#sidebar h2 {
+	background-image: -webkit-linear-gradient(bottom, rgb(3,113,152) 10%, rgb(0,136,204) 100%);
+	background-image: linear-gradient(bottom, rgb(3,113,168) 10%, rgb(0,136,204) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(3,113,168) 10%, rgb(0,136,204) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(3,113,168) 10%, rgb(0,136,204) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(3,113,168) 10%, rgb(0,136,204) 100%);
+	padding: 0.83em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0;
+}
+
+#sidebar div {
+	position: relative;
+	margin: 10px;
+	right: 0;
+	left: 0;
+	padding-bottom: 10px;
+	background: rgba(0,0,0,.3);
+	border: 2px;
+	color: #EEE;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.overflow-block ol {
+	max-height: 25vw;
+	overflow-y: scroll;
+	margin: 0;
+}
+
+.overflow-block li{
+		font-size: 12pt;
+		margin: 10px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+}
+
+.overflow-block ::-webkit-scrollbar {
+	display: none;
+}
+
+div.outerClass {
+	display: inline-block;
+	position: relative;
+	width: calc(100% - 300px); /* 100% - other elements in video-controls */
+}
+
+#seekOverlay {
+	width: 100%;
+	height: 8.4px;
+}
+
+.marker {
+	background-color: rgb(100,200,255);
+	width: 5px;
+	height: 8.4px;
+	top: 5.2px;
+	display: inline-block;
+	position: absolute;
+}
+
+.marker .tooltipcontent {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	bottom: 300%;
+	left: 50%;
+	margin-left: -60px;
+}
+
+.marker:hover .tooltipcontent {
+	visibility: visible;
+}
+
+.marker .tooltipcontent::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.timecode:hover {
+	cursor: pointer;
+}
+
+.timecode:active {
+	color: rgb(50,150,255);
+}
